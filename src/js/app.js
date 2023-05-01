@@ -1,9 +1,23 @@
-import { select, classNames } from './settings.js';
+import { settings, select, classNames } from './settings.js';
 
 import HomePage from './components/Home.js';
-import ProductsPage from './components/Products.js';
+import Product from './components/Products.js';
 import ContactPage from './components/Contact.js';
 const app = {
+  initData: function () {
+    const thisApp = this;
+    const url = settings.db.url + '/' + settings.db.products;
+    thisApp.data = {};
+    fetch(url)
+      .then((rawResponse) => {
+        return rawResponse.json();
+      })
+      .then((parsedResponse) => {
+        thisApp.data.products = parsedResponse;
+        console.log(parsedResponse);
+        thisApp.initProductsPage();
+      });
+  },
   initContactPage: function () {
     const thisApp = this;
     const contactElem = document.querySelector(select.containerOf.contactPage);
@@ -12,9 +26,15 @@ const app = {
   },
   initProductsPage: function () {
     const thisApp = this;
-    const productsElem = document.querySelector(select.containerOf.productPage);
+    //const productsElem = document.querySelector(select.containerOf.productPage);
+    //thisApp.productPage = new ProductsPage(productsElem);
 
-    thisApp.productPage = new ProductsPage(productsElem);
+    for (let productData in thisApp.data.products) {
+      new Product(
+        thisApp.data.products[productData].id,
+        thisApp.data.products[productData]
+      );
+    }
   },
   initPages: function () {
     const thisApp = this;
@@ -94,6 +114,7 @@ const app = {
   init: function () {
     const thisApp = this;
     thisApp.initPages();
+    thisApp.initData();
     thisApp.initHomePage();
     thisApp.initProductsPage();
     thisApp.initContactPage();

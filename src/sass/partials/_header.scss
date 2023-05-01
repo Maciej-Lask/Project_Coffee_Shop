@@ -1,12 +1,16 @@
 .header {
-  //background-image: url('/src/images/background.png');
-  background-image: url('/src/images/about-us.jpg');
-  //color: $color-light;
+  background-image: url('/images/background.png');
+  height: 107.5vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+  background-size: cover;
+
+  background-repeat: no-repeat;
+  //background-attachment: fixed;
 
   &__wrapper {
     position: relative;
   }
-
 }
 
 .logo {
@@ -17,34 +21,117 @@
     font-family: $font-header;
     font-weight: $font-bold;
     text-transform: uppercase;
-    letter-spacing: 1dvh;
-
-
+    letter-spacing: 1.15dvh;
+    font-size: 37px;
+    color: $color-light;
+    margin: 35px 10px 0 67px;
   }
 
   &__subtitle {
-    margin: 0;
+    margin-left: 70px;
+    margin-top: 7px;
     text-transform: uppercase;
     font-family: $font-header;
     font-weight: $font-bold;
     font-size: 16px;
-    letter-spacing: 0.5dvh;
+    letter-spacing: 0.52dvh;
+    color: $color-light;
+  }
+}
 
+.main-nav {
+  margin: 58px auto;
+  padding-left: 10px;
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $font-header;
+    font-weight: $font-semibold;
+    font-size: 19px;
+    padding: 0;
+    margin: 0 25px 0 0;
+    text-align: center;
+    letter-spacing: 0.18dvh;
+    color: darken($color-light, 25%);
+  }
+}
+
+.page__Title__Container {
+  margin-top: 42px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //align-items: center;
+
+  .page__Title {
+    margin: 0;
+    color: $color-main;
+    text-align: center;
+    font-size: 100px;
+    font-family: $font-header;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    line-height: 1;
+
+    &__MainTitle {
+      margin-right: 34.3%;
+    }
+
+    &__Subtitle {
+      margin-left: 14.8%;
+      // &::after {
+      //   position: absolute;
+      //   content: '';
+      //   bottom: 35.8%;
+      //   left: 50%;
+      //   width: 275px;
+      //   height: 6px;
+      //   transform: translateX(-46.5%);
+      //   border: 10px;
+      //   background: $color-main;
+      // }
+    }
+  }
+}
+.rectangle-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .rectangle {
+    background: $color-main;
+    //margin-top: 30px;
+    transform: translateY(-1980%);
+    width: 275px;
+    height: 6px;
+  
   }
 
 }
 
-.main-nav {
+.discover-container {
+  margin-top: 100px;
 
-  a {
-    color: $color-main;
-    text-decoration: none;
-
-
-    &.active {
-      background: lighten($color-dark, 75%);
-    }
-
+  .discover {
+    text-transform: uppercase;
+    font-family: $font-header;
+    font-weight: $font-light;
+    font-size: 34px;
+    text-align: center;
+    letter-spacing: 0.75dvh;
+    color: $color-light;
+    margin-left: 9px;
+    margin-bottom: 20px;
   }
+}
 
+.discover-icon {
+  display: flex;
+  justify-content: center;
+  //align-items: center;
+  color: $color-light;
+  font-size: 38px;
 }

@@ -1,0 +1,35 @@
+.about-us {
+  background-image: url('/images/about-us.jpg');
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1.section-title {
+    font-size: 3rem;
+    color: $color-main;
+    text-align: center;
+ 
+        &::after {
+      content: '';
+      width: 200px;
+      height: 7px;
+      background-color: $color-main;
+      display: block;
+      margin: 1rem auto 0;
+    }
+  }
+
+
+  h3 {
+    font-size: 1.5rem;
+    color: $color-light;
+    margin-bottom: 1rem;
+    font-family: $font-header;
+    font-style: italic;
+  }
+}

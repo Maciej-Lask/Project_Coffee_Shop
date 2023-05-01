@@ -8,7 +8,7 @@
     homePage: '.home-page-wrapper',
     pages: '#pages',
     contactPage: '.contact-wrapper',
-    productPage: '.product-page-wrapper',
+    productPage: '#product-list',
   },
 
   home: {
