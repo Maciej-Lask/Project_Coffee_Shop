@@ -14,7 +14,7 @@ const app = {
       })
       .then((parsedResponse) => {
         thisApp.data.products = parsedResponse;
-        console.log(parsedResponse);
+        //console.log(parsedResponse);
         thisApp.initProductsPage();
       });
   },
@@ -26,14 +26,16 @@ const app = {
   },
   initProductsPage: function () {
     const thisApp = this;
-    //const productsElem = document.querySelector(select.containerOf.productPage);
-    //thisApp.productPage = new ProductsPage(productsElem);
-
+    let productIsEven = false;
     for (let productData in thisApp.data.products) {
+
       new Product(
         thisApp.data.products[productData].id,
-        thisApp.data.products[productData]
+        thisApp.data.products[productData],
+        productIsEven
       );
+      // switch productIsEven to opposite
+      productIsEven = !productIsEven;
     }
   },
   initPages: function () {
@@ -41,7 +43,7 @@ const app = {
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
 
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
-    console.log('thisApp.navLinks :>> ', thisApp.navLinks);
+    //console.log('thisApp.navLinks :>> ', thisApp.navLinks);
     const idFromHash = window.location.hash.replace('#/', '');
 
     let pageMatchingHash = thisApp.pages[0].id;
@@ -91,7 +93,7 @@ const app = {
 
     // Select all links at home section using querySelectorAll
     thisApp.links = document.querySelectorAll(select.home.panelLinks);
-    console.log('thisApp.links :>> ', thisApp.links);
+    //console.log('thisApp.links :>> ', thisApp.links);
     for (let link of thisApp.links) {
       const linkContainer = link.closest('.link');
 

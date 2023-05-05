@@ -1,0 +1,44 @@
+.product {
+  .product-title {
+    font-family: $font-header;
+    text-transform: uppercase;
+    letter-spacing: 0.5dvh;
+    font-size: 46px;
+    margin-bottom: 0;
+  }
+
+  p {
+    color: $color-dark;
+    font-size: 15px;
+    //letter-spacing: 1px;
+    font-family: $font-header;
+    font-weight: $font-light;
+  }
+
+  .description {
+    max-width: 330px;
+  }
+
+  h3 {
+    font-family: $font-header;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 0.2dvh;
+    margin: 0;
+    & span {
+    color: $color-main;
+  }
+  }
+  .col-image {
+   
+    img {
+      width: 100%;
+    }
+  }
+  .rectangle {
+  margin-top: 25px;
+  height: 4px;
+  width: 17%;
+  background-color: $color-main;
+  }
+}
