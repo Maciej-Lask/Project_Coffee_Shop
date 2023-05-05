@@ -25,20 +25,22 @@
     font-size: 20px;
     letter-spacing: 0.2dvh;
     margin: 0;
-    & span {
-    color: $color-main;
+    
+    span {
+      color: $color-main;
+    }
   }
-  }
+
   .col-image {
-   
     img {
       width: 100%;
     }
   }
+
   .rectangle {
-  margin-top: 25px;
-  height: 4px;
-  width: 17%;
-  background-color: $color-main;
+    margin-top: 25px;
+    height: 4px;
+    width: 17%;
+    background-color: $color-main;
   }
 }
