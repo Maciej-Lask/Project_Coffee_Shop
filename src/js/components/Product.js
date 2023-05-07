@@ -34,9 +34,14 @@ class Product {
     console.log('productContainerHome :>> ', productContainerHome);
 
     if (thisProduct.isEven == false) {
-      //console.log('swap product element');
       thisProduct.element.insertBefore(textElement, imageElement);
     }
+    // if (window.matchMedia('(min-width: 768px)').matches) {
+    //   if (thisProduct.isEven == false) {
+    //     thisProduct.element.insertBefore(textElement, imageElement);
+    //   }
+    // }
+
     // productContainerHome.appendChild(thisProduct.element);
     // productContainer.appendChild(thisProduct.element);
     

@@ -22,13 +22,13 @@
 <body>
   <header class="header">
     <div class="row">
-      <div class="col-2"></div>
-      <div class="col-4 logo">
+      <div class="col-0 col-xl-2"></div>
+      <div class="col-12 col-lg-4 logo">
         <h1 class="logo__title">EL TIGRE</h1>
         <h2 class="logo__subtitle">VENEZUELA COFFEE BEANS</h2>
       </div>
-      <div class="col-2"></div>
-      <div class="col-4 main-nav">
+      <div class="col-0 col-lg-2"></div>
+      <div class="col-12 col-lg-4 main-nav">
         <a href="#home">Home</a>
         <a href="#products">Products</a>
         <a href="#contact">Contact</a>
@@ -61,13 +61,13 @@
   <div id="pages">
     <section id="home">
       <div id="product-list-home" class="product-page-wrapper">
-        <h2 class="page__title">Products</h2>
+        <h2 class="subPage__title">Products</h2>
       </div>
       <div class="home-page-wrapper "></div>
     </section>
     <section id="products">
       <div id="product-list" class="product-page-wrapper">
-        <h2 class="page__title">Products</h2>
+        <h2 class="subPage__title">Products</h2>
       </div>
     </section>
     <section id="contact">
@@ -82,7 +82,7 @@
 
 
                 <section class="about-us">
-                        <h1 class="section-title">About us</h1>
+                        <h2 class="subPage__title ">About us</h2>
                         <h3>Who are we? Just a bunch of friends with a love for a good coffee and desire
                           to create something new, something original.</h3>
                         <h3>Our coffees reflect us - young, wild and free. We are on the journey of new
@@ -97,11 +97,11 @@
   <script id="template-product" type="text/x-handlebars-template">
 
     <div class="product row">
-        <div class="col-2"></div>
-        <div class="col-4 col-image"> 
+        <div class="col-0 col-lg-2"></div>
+        <div class="col-0 col-md-6 col-lg-4 col-image"> 
             <img src="{{image}}" alt="{{title}}">
         </div>
-        <div class="col-4 col-text">
+        <div class="col-12 col-md-6 col-lg-4 col-text">
             <h2 class = "product-title">{{title}}</h2>
             <div class="row">
               <div class="col-3 rectangle"></div>
@@ -114,12 +114,12 @@
               <h3>Intensity: <span>{{intensity}}</span></h3>
             
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-0 col-lg-2"></div>
     </div>
 </script>
   <script id="template-contactPage" type="text/x-handlebars-template">
 <div class="contact">
-  <h2 class="page__title">Contact us</h2>
+  <h2 class="subPage__title">Contact us</h2>
   <form class="contact-form">
     <div class="form-group">
       <label for="name">Name</label>
