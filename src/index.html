@@ -60,10 +60,15 @@
   <!-- Pages -->
   <div id="pages">
     <section id="home">
+      <div id="product-list-home" class="product-page-wrapper">
+        <h2 class="page__title">Products</h2>
+      </div>
       <div class="home-page-wrapper "></div>
     </section>
     <section id="products">
-      <div id="product-list" class="product-page-wrapper"><h2 class="page__title">Products</h2></div>
+      <div id="product-list" class="product-page-wrapper">
+        <h2 class="page__title">Products</h2>
+      </div>
     </section>
     <section id="contact">
       <div class="contact-wrapper "></div>
@@ -73,20 +78,9 @@
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script id="template-home-page" type="text/x-handlebars-template">
           <div class="home-page-class">
-              <div class="infoPanelSection container-fluid">
+              <div class="container-fluid">
 
-                <div class="row">
-                  <a class="link col-md-6" href="#products">
-                  <div class="infoPanel productsPanel">
-                    <p class="sub-title">Products</p>
-                  </div>
-                  </a>
-                  <a class="link col-md-6" href="#contact">
-                  <div class="infoPanel contactPanel">
-                    <p class="sub-title">Contact us</p>
-                  </div>
-                  </a>
-                </div>
+
                 <section class="about-us">
                         <h1 class="section-title">About us</h1>
                         <h3>Who are we? Just a bunch of friends with a love for a good coffee and desire
@@ -100,8 +94,8 @@
 
           </div>
         </script>
-<script id="template-product" type="text/x-handlebars-template">
-    
+  <script id="template-product" type="text/x-handlebars-template">
+
     <div class="product row">
         <div class="col-2"></div>
         <div class="col-4 col-image"> 
@@ -148,4 +142,5 @@
     <p>© 2021 EL TIGRE inc.</p>
   </footer>
 </body>
+
 </html>

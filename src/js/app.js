@@ -1,7 +1,7 @@
 import { settings, select, classNames } from './settings.js';
 
 import HomePage from './components/Home.js';
-import Product from './components/Products.js';
+import Product from './components/Product.js';
 import ContactPage from './components/Contact.js';
 const app = {
   initData: function () {

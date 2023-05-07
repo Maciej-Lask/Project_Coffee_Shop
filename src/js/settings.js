@@ -9,6 +9,7 @@
     pages: '#pages',
     contactPage: '.contact-wrapper',
     productPage: '#product-list',
+    productPageHome: '#product-list-home',
     product: '.product',
     text: '.col-text',
     image:'.col-image',
@@ -49,7 +50,7 @@ export const templates = {
   homePage: Handlebars.compile(
     document.querySelector(select.templateOf.homePage).innerHTML
   ),
-  productsPage: Handlebars.compile(
+  productPage: Handlebars.compile(
     document.querySelector(select.templateOf.product).innerHTML
   ),
   contactPage: Handlebars.compile(
