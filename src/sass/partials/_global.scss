@@ -33,3 +33,33 @@ body {
 .col-0{
   height: 0;
 }
+
+.subPage__title {
+  color: $color-main;
+  letter-spacing: 1.5dvh;
+  text-transform: uppercase;
+  font-family: $font-header;
+  font-weight: $font-bold;
+  position: relative;
+  font-size: 70px;
+  margin-bottom: 70px;
+  margin-top: 0;
+  text-align: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-49%);
+    width: 40.8%;
+    height: 7px;
+    background-color: $color-main;
+  }
+}
+
+@media (max-width: 576px) {
+  .subPage__title {
+    font-size: 10vw;
+  }
+}
