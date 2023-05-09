@@ -8,16 +8,14 @@
     homePage: '.home-page-wrapper',
     pages: '#pages',
     contactPage: '.contact-wrapper',
-    productPage: '#product-list',
-    productPageHome: '#product-list-home',
+    productList: '#product-list',
+    productListHome: '#product-list-home',
     product: '.product',
     text: '.col-text',
     image:'.col-image',
   },
 
-  home: {
-    panelLinks: 'a.link',
-  },
+
   nav: {
     links: '.main-nav a',
   },
@@ -50,7 +48,7 @@ export const templates = {
   homePage: Handlebars.compile(
     document.querySelector(select.templateOf.homePage).innerHTML
   ),
-  productPage: Handlebars.compile(
+  productElement: Handlebars.compile(
     document.querySelector(select.templateOf.product).innerHTML
   ),
   contactPage: Handlebars.compile(

@@ -1431,7 +1431,7 @@ body {
   height: 0;
 }
 
-.subPage__title {
+.subPage-title {
   color: #BEA67C;
   letter-spacing: 1.5dvh;
   text-transform: uppercase;
@@ -1443,7 +1443,7 @@ body {
   margin-top: 0;
   text-align: center;
 }
-.subPage__title::after {
+.subPage-title::after {
   content: "";
   position: absolute;
   bottom: -40px;
@@ -1455,7 +1455,7 @@ body {
 }
 
 @media (max-width: 576px) {
-  .subPage__title {
+  .subPage-title {
     font-size: 10vw;
   }
 }
@@ -1477,7 +1477,7 @@ body {
   display: inline-block;
   line-height: 1;
 }
-.logo__title {
+.logo-title {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -1486,7 +1486,7 @@ body {
   color: #fff;
   margin: 35px 10px 0 67px;
 }
-.logo__subtitle {
+.logo-subtitle {
   margin-left: 70px;
   margin-top: 7px;
   text-transform: uppercase;
@@ -1500,11 +1500,11 @@ body {
   .logo .logo {
     margin: 0;
   }
-  .logo .logo__title {
+  .logo .logo-title {
     margin: 35px 0 0 0;
     text-align: center;
   }
-  .logo .logo__subtitle {
+  .logo .logo-subtitle {
     margin: 10px 0 0 0;
     text-align: center;
   }
@@ -1539,14 +1539,14 @@ body {
     margin: 10px 0;
   }
 }
-.page__Title__Container {
+.page-Title-Container {
   margin-top: 42px;
   height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.page__Title__Container .page__Title {
+.page-Title-Container .page-Title {
   margin: 0;
   color: #BEA67C;
   text-align: center;
@@ -1558,13 +1558,13 @@ body {
   line-height: 1;
   position: relative;
 }
-.page__Title__Container .page__Title__MainTitle {
+.page-Title-Container .page-Title-MainTitle {
   margin-right: 34.3%;
 }
-.page__Title__Container .page__Title__Subtitle {
+.page-Title-Container .page-Title-Subtitle {
   margin-left: 14.8%;
 }
-.page__Title__Container .page__Title__Subtitle::after {
+.page-Title-Container .page-Title-Subtitle::after {
   position: absolute;
   content: "";
   bottom: -10%;
@@ -1576,22 +1576,22 @@ body {
   background: #BEA67C;
 }
 @media (max-width: 992px) {
-  .page__Title__Container .page__Title__MainTitle {
+  .page-Title-Container .page-Title-MainTitle {
     margin: 0 10px;
   }
-  .page__Title__Container .page__Title__Subtitle {
+  .page-Title-Container .page-Title-Subtitle {
     margin: 0 10px;
   }
 }
 @media (max-width: 768px) {
-  .page__Title__Container .page__Title {
+  .page-Title-Container .page-Title {
     font-size: 14vw;
     letter-spacing: 0.75dvh;
   }
 }
 
 @media (max-width: 992px) {
-  .page__Title__Container {
+  .page-Title-Container {
     height: auto;
     margin: 0;
   }
