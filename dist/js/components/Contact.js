@@ -17,9 +17,5 @@ class ContactPage {
     thisContact.dom.wrapper.innerHTML = generatedHTML;
 
   }
-
-
-
-
 }
 export default ContactPage;

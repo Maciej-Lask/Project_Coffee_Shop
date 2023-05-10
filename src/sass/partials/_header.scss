@@ -1,6 +1,7 @@
 .header {
   background-image: url('/images/background.webp');
   height: 110vh;
+  //height: 1000px;
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: multiply;
   background-size: cover;
@@ -176,4 +177,5 @@
   justify-content: center;
   color: $color-light;
   font-size: 38px;
+  margin: 20px;
 }

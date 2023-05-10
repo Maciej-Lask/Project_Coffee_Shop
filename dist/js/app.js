@@ -117,9 +117,10 @@ const app = {
     const thisApp = this;
     thisApp.initPages();
     thisApp.initData();
+    //dlaczego przesunięcie thisApp.initContactPage(); o dwie linijki w dół psuje kod
+    thisApp.initContactPage();
     thisApp.initHomePage();
     thisApp.initProductsPage();
-    thisApp.initContactPage();
   },
 };
 
