@@ -90,34 +90,11 @@ const app = {
     const thisApp = this;
     const homePageElem = document.querySelector(select.containerOf.homePage);
     thisApp.homePage = new HomePage(homePageElem);
-
-    // Select all links at home section using querySelectorAll
-    thisApp.links = document.querySelectorAll(select.home.panelLinks);
-    //console.log('thisApp.links :>> ', thisApp.links);
-    for (let link of thisApp.links) {
-      const linkContainer = link.closest('.link');
-
-      if (linkContainer) {
-        linkContainer.addEventListener('click', function (event) {
-          event.preventDefault();
-
-          const href = link.getAttribute('href');
-          if (href.startsWith('#')) {
-            const id = href.substring(1);
-            thisApp.activatePage(id);
-            window.location.hash = '#/' + id;
-          } else {
-            window.location.href = href;
-          }
-        });
-      }
-    }
   },
   init: function () {
     const thisApp = this;
     thisApp.initPages();
     thisApp.initData();
-    //dlaczego przesunięcie thisApp.initContactPage(); o dwie linijki w dół psuje kod
     thisApp.initContactPage();
     thisApp.initHomePage();
     thisApp.initProductsPage();
