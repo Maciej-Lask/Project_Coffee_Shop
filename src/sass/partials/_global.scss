@@ -4,8 +4,6 @@
 
 body {
   margin: 0;
-  //background: lighten($color-dark, 75%);
-  //font-family: $font-text;
   font-size: 14px;
   line-height: 1.7;
   font-weight: $font-normal;
@@ -58,8 +56,22 @@ body {
   }
 }
 
+.row {
+  margin: 0;
+}
+
+.row > * {
+  padding: 0;
+}
+
 @media (max-width: 576px) {
   .subPage-title {
     font-size: 10vw;
+  }
+}
+@media (max-width: 300px) {
+  .subPage-title {
+    font-size: 6vw;
+    letter-spacing: 0.5dvh;
   }
 }

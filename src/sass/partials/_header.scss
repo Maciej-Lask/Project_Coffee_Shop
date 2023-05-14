@@ -1,22 +1,11 @@
-// .header {
-//   background-image: url('/images/background.webp');
-//   // min-height: 110vh;
-//   // //height: 1000px;
-//   height: max(1000px, 110vh);
-//   background-color: rgba(0, 0, 0, 0.7);
-//   background-blend-mode: multiply;
-//   background-size: cover;
 
-//   background-repeat: no-repeat;
+// * {
+//   border: 1px solid red;
 // }
-// @media (max-width: 576px) {
-//   .header {
-//     height: 90vh;
-//   }
-// }
+
 .header {
   background-image: url('/images/background.webp');
-  height: max(1000px, 110vh);
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: multiply;
   background-size: cover;
@@ -24,7 +13,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
 
   .row {
     flex-grow: 1;
@@ -82,6 +71,19 @@
       &-subtitle {
         margin: 10px 0 0 0;
         text-align: center;
+      }
+    }
+  }
+    @media (max-width: 300px) {
+    .logo {
+      margin: 0;
+
+      &-title {
+        font-size: 10vw;
+      }
+
+      &-subtitle {
+        font-size: 10vw;
       }
     }
   }
@@ -164,11 +166,11 @@
 
     @media (max-width: 992px) {
       &-MainTitle {
-        margin: 0 10px;
+        margin: 0;
       }
 
       &-Subtitle {
-        margin: 0 10px;
+        margin: 0;
       }
     }
   }
@@ -176,6 +178,12 @@
     .page-Title {
       font-size: 14vw;
       letter-spacing: 0.75dvh;
+    }
+    @media (max-width: 300px) {
+      .page-Title {
+        font-size: 10vw;
+        letter-spacing: 0.5dvh;
+      }
     }
   }
 }
@@ -187,7 +195,7 @@
 }
 
 .discover-container {
-  margin-top: 5vh;
+  margin-top: 1vh;
 
   .discover {
     text-transform: uppercase;
@@ -201,7 +209,7 @@
   }
   @media (max-width: 576px) {
     .discover {
-      font-size: 3vh;
+      font-size: 10vw;
     }
   }
 }

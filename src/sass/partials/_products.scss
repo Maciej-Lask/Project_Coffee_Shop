@@ -40,22 +40,32 @@
   }
 
   .col-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
       width: 100%;
       max-height: 430px;
+      max-width: 576px;
     }
   }
-
-  // @media (max-width: 768px) {
-  //   img {
-  //     display: none;
-  //   }
-  // }
 
   .rectangle {
     margin: 25px 0 0 20px;
     height: 4px;
     width: 17%;
     background-color: $color-main;
+  }
+}
+
+@media (min-width: 576px) {
+  .product:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (max-width: 576px) {
+  .product {
+    flex-direction: column;
   }
 }

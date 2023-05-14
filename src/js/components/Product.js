@@ -16,12 +16,12 @@ class Product {
     const generatedHTML = templates.productElement(thisProduct.data);
     thisProduct.element = utils.createDOMFromHTML(generatedHTML);
 
-    const textElement = thisProduct.element.querySelector(
-      select.containerOf.text
-    );
-    const imageElement = thisProduct.element.querySelector(
-      select.containerOf.image
-    );
+    // const textElement = thisProduct.element.querySelector(
+    //   select.containerOf.text
+    // );
+    // const imageElement = thisProduct.element.querySelector(
+    //   select.containerOf.image
+    // );
     const productContainer = document.querySelector(
       select.containerOf.productList
     );
@@ -29,10 +29,14 @@ class Product {
       select.containerOf.productListHome
     );
 
-    if (thisProduct.isEven == false) {
-      thisProduct.element.insertBefore(textElement, imageElement);
-    }
-    
+    // if (thisProduct.isEven == false) {
+    //   thisProduct.element.insertBefore(textElement, imageElement);
+    // }
+    // if (window.matchMedia('(min-width: 768px)').matches) {
+    //   if (thisProduct.isEven == false) {
+    //     thisProduct.element.insertBefore(textElement, imageElement);
+    //   }
+    // }
     productContainerHome.appendChild(thisProduct.element.cloneNode(true));
     productContainer.appendChild(thisProduct.element.cloneNode(true));
   }
