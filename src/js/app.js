@@ -14,7 +14,7 @@ const app = {
       })
       .then((parsedResponse) => {
         thisApp.data.products = parsedResponse;
-        //console.log(parsedResponse);
+        
         thisApp.initProductsPage();
       });
   },
@@ -26,16 +26,26 @@ const app = {
   },
   initProductsPage: function () {
     const thisApp = this;
-    let productIsEven = false;
-    for (let productData in thisApp.data.products) {
+    const productListContainer = document.querySelector(
+      select.containerOf.productList
+    );
+    const homePageContainer = document.querySelector(
+      select.containerOf.homePage
+    );
 
-      new Product(
+    for (let productData in thisApp.data.products) {
+      const product = new Product(
         thisApp.data.products[productData].id,
-        thisApp.data.products[productData],
-        productIsEven
+        thisApp.data.products[productData]
       );
-      // switch productIsEven to opposite
-      productIsEven = !productIsEven;
+
+      productListContainer.appendChild(product.element);
+      const secondToLastChild =
+        homePageContainer.children[homePageContainer.children.length - 1];
+      homePageContainer.insertBefore(
+        product.element.cloneNode(true),
+        secondToLastChild
+      );
     }
   },
   initPages: function () {
@@ -43,7 +53,6 @@ const app = {
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
 
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
-    //console.log('thisApp.navLinks :>> ', thisApp.navLinks);
     const idFromHash = window.location.hash.replace('#/', '');
 
     let pageMatchingHash = thisApp.pages[0].id;
@@ -60,12 +69,8 @@ const app = {
       link.addEventListener('click', function (event) {
         const clickedElement = this;
         event.preventDefault();
-        // get page id from href attribute of clicked element
-
         const id = clickedElement.getAttribute('href').replace('#', '');
-
         thisApp.activatePage(id);
-        //change URL hash
         window.location.hash = '#/' + id;
       });
     }
@@ -73,10 +78,8 @@ const app = {
 
   activatePage: function (pageId) {
     const thisApp = this;
-    //add class 'active' to matching page and remove class 'active' from other pages
     for (let page of thisApp.pages) {
       page.classList.toggle(classNames.pages.active, page.id == pageId);
-      //add class 'active' to matching link and remove class 'active' from other links
       for (let link of thisApp.navLinks) {
         link.classList.toggle(
           classNames.nav.active,

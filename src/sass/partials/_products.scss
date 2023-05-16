@@ -19,7 +19,6 @@
     color: $color-dark;
     font-size: 15px;
     margin-left: 10px;
-    //letter-spacing: 1px;
     font-family: $font-header;
     font-weight: $font-light;
   }
@@ -73,7 +72,7 @@
   }
 }
 
-.product:nth-child(2) {
+.product:nth-child(1) {
   position: relative;
 
   .roasting {
@@ -81,12 +80,9 @@
       content: '';
       position: absolute;
       transform: translate(60%, 0%);
-      // width: 150px;
-      // height: 150px;
       width: 10%;
       height: 30%;
       min-width: 60px;
-      // min-height: 75px;
       background-image: url('/images/mostPopular.png');
       background-size: contain;
       background-repeat: no-repeat;
@@ -97,7 +93,6 @@
 @media (max-width: 300px) {
   .roasting {
     &::after {
-      //display: none;
       top: 100%;
       left: 20%;
     }

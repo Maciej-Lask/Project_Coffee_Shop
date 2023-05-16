@@ -9,7 +9,6 @@
     pages: '#pages',
     contactPage: '.contact-wrapper',
     productList: '#product-list',
-    productListHome: '#product-list-home',
     product: '.product',
     text: '.col-text',
     image:'.col-image',
