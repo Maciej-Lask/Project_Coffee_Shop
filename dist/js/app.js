@@ -14,7 +14,7 @@ const app = {
       })
       .then((parsedResponse) => {
         thisApp.data.products = parsedResponse;
-        
+
         thisApp.initProductsPage();
       });
   },
